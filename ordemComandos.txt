@@ -1,0 +1,13 @@
+git config --global user.name "Seu Nome Completo"
+git config --global user.email "seu.email@example.com"
+
+git clone https://github.com/marcocdsantis/projeto-web
+
+cd projeto-web
+
+code .
+
+python -m venv venv
+venv\Scripts\activate
+
+pip install -r requirements.txt
