@@ -58,6 +58,24 @@ def calcular(nome, ano):
     return render_template('variaveis.html', nome_usuario = nome, ano_atual = ano_atual, 
                            nascimento = ano, idade = idade, status = status)
 
+@app.route('/dicionario')
+def dicionario():
+    dados = {
+        'chave': 'valor',
+        'curso': 'GTI',
+        'local': 'Fatec Jahu',
+        'semestre': 4
+    }
+    return render_template('dicionario.html', **dados)
+
+@app.route('/condicao/<int:valor>')
+def condicao(valor):
+    return render_template('condicao.html', valor =valor)
+
+
+
+
+
 # Última coisa
 if __name__ == '__main__':
     app.run(debug=True)

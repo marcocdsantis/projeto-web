@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{valor}}</h1>
+
+    {% if valor == 0 %}
+        <p>O número enviado é ZERO, e não divide</p>
+
+    {% elif (valor % 2) == 1 %}
+        <p>O numero enviado é impar</p>
+
+    {% else %}
+
+    {% endif %}
+
+    <br> <h1>Contando até 0</h1>
+    <ul>
+        {% for i in range(valor, -1 -1) %}
+            <li>{{i}}</li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
