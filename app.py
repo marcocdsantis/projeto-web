@@ -72,6 +72,36 @@ def dicionario():
 def condicao(valor):
     return render_template('condicao.html', valor =valor)
 
+@app.route('/perfil/<nome>')
+def perfil(nome):
+    usuarios = {
+        'admin': {
+            'nome': 'Administrador',
+            'email': 'admin@fatec.br',
+            'nivel': 'administrador',
+            'ativo': True,
+            'posts': 47
+        },
+        'joao':{
+            'nome': 'João Silva',
+            'email': 'joao@email.com',
+            'nivel': 'usuario',
+            'ativo': True,
+            'posts': 12
+
+        },
+        'maria':{
+            'nome': 'Maria Souza',
+            'email': 'maria@email.com',
+            'nivel': 'moderador',
+            'ativo': False,
+            'posts': 31
+        }
+    }
+
+    usuario = usuarios.get(nome)
+
+    return render_template('perfil.html', usuario=usuario, nome=nome)
 
 
 
