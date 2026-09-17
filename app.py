@@ -7,15 +7,11 @@ print(__name__)
 
 @app.route('/')
 def pagina_inicial():
-    return '<h1>Olá</h1>'
+    return render_template('index.html')
 
 @app.route('/sobre')
 def sobre():
-    return ''' 
-<h1 style='color:red'> Meu nome é: </h1>
-<p> Marcolério <b> de Santis</b>
-<!-- html -->
-'''
+    return render_template('sobre.html')
 
 @app.route('/curso')
 def curso():
